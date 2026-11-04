@@ -1,0 +1,25 @@
+# ---- Windows ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.lnk
+
+# ---- macOS ----
+.DS_Store
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- Obsidian 等工作区配置 ----
+.obsidian/
+
+# ---- Office 临时文件 ----
+~$*
+*.tmp
+
+# ---- 本地备份 ----
+*.bak
