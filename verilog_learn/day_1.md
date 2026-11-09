@@ -284,6 +284,7 @@ endmodule
             2'b01: q_mux = q1;
             2'b10: q_mux = q2;
             2'b11: q_mux = q3;
+            dafult q_mux = 0;
         endcase
     end
 ```
