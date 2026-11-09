@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FPGA · 逻辑岗作战台 | 概念 → 刷题 → 手写</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" fill="none">
+        <rect x="6" y="6" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.6"/>
+        <rect x="12" y="12" width="8" height="8" rx="1.4" fill="currentColor"/>
+        <path d="M12 6V2M16 6V2M20 6V2M12 30v-4M16 30v-4M20 30v-4M6 12H2M6 16H2M6 20H2M30 12h-4M30 16h-4M30 20h-4"
+              stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <h1>FPGA · 逻辑岗作战台</h1>
+      <p>华为 硬件技术工程师（实习生）· 逻辑 &nbsp;／&nbsp; AC620 · EP4CE10F17C8N &nbsp;／&nbsp; 概念 → 刷题 → 手写，只算工时</p>
+    </div>
+  </div>
+
+  <div class="top-stats">
+    <div class="tstat" id="top-hours">
+      <span class="tstat-k">总工时</span><span class="tstat-v">—</span>
+    </div>
+    <div class="tstat" id="top-progress">
+      <span class="tstat-k">总进度</span><span class="tstat-v">—</span>
+    </div>
+    <div class="tstat" id="top-load">
+      <span class="tstat-k">剩余工时</span><span class="tstat-v">—</span>
+    </div>
+    <button class="icon-btn" id="btn-theme" title="切换明暗主题" aria-label="切换主题">◐</button>
+    <button class="icon-btn" id="btn-export" title="导出进度 JSON" aria-label="导出">↧</button>
+    <button class="icon-btn" id="btn-import" title="导入进度 JSON" aria-label="导入">↥</button>
+    <input type="file" id="file-import" accept="application/json,.json" hidden>
+  </div>
+</header>
+
+<div class="app">
+  <nav class="sidenav" id="sidenav">
+    <button class="navitem" data-tab="road">
+      <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M7.5 15.5V11M11.5 15.5V8M15.5 15.5v-3M19.5 15.5V9"/></svg>
+      <span>路线图</span>
+    </button>
+    <button class="navitem" data-tab="hb">
+      <svg viewBox="0 0 24 24"><path d="M4 5.5h7.5M4 12h10M4 18.5h6"/><path d="M17.5 6.5l1.6 1.7 3-3.4M17.5 13l1.6 1.7 3-3.4"/></svg>
+      <span>HDLBits</span>
+    </button>
+    <button class="navitem" data-tab="skills">
+      <svg viewBox="0 0 24 24"><path d="M12 3l8 4.6v8.8L12 21l-8-4.6V7.6z"/><path d="M12 8.4l4 2.3v4.6l-4 2.3-4-2.3v-4.6z"/></svg>
+      <span>能力矩阵</span>
+    </button>
+    <button class="navitem" data-tab="proj">
+      <svg viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="13" rx="2"/><path d="M8.5 6V4.5A1.5 1.5 0 0110 3h4a1.5 1.5 0 011.5 1.5V6M3.5 11.5h17"/></svg>
+      <span>项目工程</span>
+    </button>
+    <button class="navitem" data-tab="jd">
+      <svg viewBox="0 0 24 24"><path d="M6 3.5h9l4 4V20a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 015 20V5A1.5 1.5 0 016.5 3.5z"/><path d="M14.5 3.5V8H19"/><path d="M8.5 12h7M8.5 16h5"/></svg>
+      <span>岗位对照</span>
+    </button>
+    <button class="navitem" data-tab="stats">
+      <svg viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16l3.5-5 3 3.5L20 7"/></svg>
+      <span>数据复盘</span>
+    </button>
+    <button class="navitem" data-tab="setup">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7"/></svg>
+      <span>设置</span>
+    </button>
+    <div class="nav-foot">
+      <span id="nav-progress-label">总进度</span>
+      <div class="mini-bar"><i id="nav-progress-bar"></i></div>
+    </div>
+  </nav>
+
+  <main id="view" class="view"></main>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/data-meta.js"></script>
+<script src="assets/data-units.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
