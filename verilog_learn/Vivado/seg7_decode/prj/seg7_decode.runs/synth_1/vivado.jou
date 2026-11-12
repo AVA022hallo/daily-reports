@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Nov 11 12:10:04 2026
+# Process ID: 22600
+# Current directory: D:/WorkProject/Project_TID/daily-reports/verilog_learn/Vivado/seg7_decode/prj/seg7_decode.runs/synth_1
+# Command line: vivado.exe -log seg7_decode.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seg7_decode.tcl
+# Log file: D:/WorkProject/Project_TID/daily-reports/verilog_learn/Vivado/seg7_decode/prj/seg7_decode.runs/synth_1/seg7_decode.vds
+# Journal file: D:/WorkProject/Project_TID/daily-reports/verilog_learn/Vivado/seg7_decode/prj/seg7_decode.runs/synth_1\vivado.jou
+# Running On        :Lu_Matebook
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-1260P
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:12
+# CPU Logical cores :16
+# Host memory       :16890 MB
+# Swap memory       :5368 MB
+# Total Virtual     :22259 MB
+# Available Virtual :6820 MB
+#-----------------------------------------------------------
+source seg7_decode.tcl -notrace

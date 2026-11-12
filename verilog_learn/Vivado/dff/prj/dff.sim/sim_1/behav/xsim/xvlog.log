@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/WorkProject/Project_TID/daily-reports/verilog_learn/Vivado/dff/rtl/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-311] analyzing module jk_ff
+INFO: [VRFC 10-311] analyzing module t_ff
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/WorkProject/Project_TID/daily-reports/verilog_learn/Vivado/dff/prj/dff.srcs/sim_1/new/tb_dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dff
