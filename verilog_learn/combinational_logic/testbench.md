@@ -154,3 +154,126 @@ endmodule
 避免与上升沿采样发生仿真竞争；
 给 DUT 输入提供半个周期的建立时间裕量；
 让波形和采样关系更清晰。
+
+# 示例模板
+
+```verilog
+`timescale 1ns/1ps
+
+module tb_dff_1bit;
+
+    // ============ 1. 信号声明 ============
+    reg  clk;
+    reg  rst_n;
+    reg  en;
+    reg  d;
+    wire q;
+    wire q_n;
+
+    // ============ 2. 例化 DUT ============
+    dff #(.W(1)) dut (
+        .clk  (clk),
+        .rst_n(rst_n),
+        .en   (en),
+        .d    (d),
+        .q    (q),
+        .q_n  (q_n)
+    );
+
+    // ============ 3. 时钟生成 ============
+    initial clk = 1'b0;
+    always #5 clk = ~clk;      // 10ns 周期 = 100MHz
+
+    // ============ 4. 波形 dump ============
+    initial begin
+        $dumpfile("tb_dff_1bit.vcd");
+        $dumpvars(0, tb_dff_1bit);
+    end
+
+    // ============ 5. 参考模型（scoreboard） ============
+    reg exp_q;
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) exp_q <= 1'b0;
+        else        exp_q <= en ? d : exp_q;
+    end
+
+    // ============ 6. 自动比对 ============
+    integer errors = 0;
+    integer checks = 0;
+
+    // 在 negedge 采样，避开 posedge 的竞争
+    always @(negedge clk) begin
+        checks = checks + 1;
+        if (q !== exp_q) begin
+            errors = errors + 1;
+            $display("[ERROR] @%0t  q=%b  expect=%b", $time, q, exp_q);
+        end
+        if (q_n !== ~exp_q) begin
+            errors = errors + 1;
+            $display("[ERROR] @%0t  q_n=%b  expect=%b", $time, q_n, ~exp_q);
+        end
+    end
+
+    // ============ 7. 激励 ============
+    initial begin
+        rst_n = 1'b0;
+        en    = 1'b0;
+        d     = 1'b0;
+
+        // ---- 用例 1：复位有效性 ----
+        #12;
+        if (q !== 1'b0) begin
+            errors = errors + 1;
+            $display("[ERROR] 复位期间 q 不为 0：q=%b", q);
+        end
+
+        @(negedge clk);
+        rst_n = 1'b1;                 // 释放复位
+
+        // ---- 用例 2：en=1，D 跟随 ----
+        @(negedge clk); d = 1'b1; en = 1'b1;
+        @(negedge clk); d = 1'b0; en = 1'b1;
+        @(negedge clk); d = 1'b1; en = 1'b1;
+
+        // ---- 用例 3：en=0，保持 ----
+        @(negedge clk); en = 1'b0; d = 1'b0;
+        @(negedge clk);            d = 1'b1;   // q 应保持 1
+        @(negedge clk);            d = 1'b0;   // q 应保持 1
+
+        // ---- 用例 4：重新打开 en ----
+        @(negedge clk); en = 1'b1; d = 1'b0;
+
+        // ---- 用例 5：复位期间再次拉低，检查异步立即生效 ----
+        @(negedge clk);
+        rst_n = 1'b0;
+        #1;
+        if (q !== 1'b0) begin
+            errors = errors + 1;
+            $display("[ERROR] 异步复位未立即生效：q=%b", q);
+        end
+        @(negedge clk);
+        rst_n = 1'b1;
+
+        // ---- 用例 6：复位后再写 ----
+        @(negedge clk); en = 1'b1; d = 1'b1;
+        @(negedge clk); en = 1'b0;
+
+        // ============ 8. 汇总 ============
+        repeat (3) @(posedge clk);
+        $display("----------------------------------");
+        $display("checks = %0d, errors = %0d", checks, errors);
+        if (errors == 0) $display("*** TEST PASSED ***");
+        else             $display("*** TEST FAILED ***");
+        $finish;
+    end
+
+    // ============ 9. 超时保护 ============
+    initial begin
+        #10000;
+        $display("[FATAL] simulation timeout");
+        $finish;
+    end
+
+endmodule
+```
