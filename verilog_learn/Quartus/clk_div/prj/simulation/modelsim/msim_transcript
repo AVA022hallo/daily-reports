@@ -1,0 +1,40 @@
+# Reading D:/WorkApp/Quartus13.0windows/modelsim_ase/tcl/vsim/pref.tcl 
+# do clk_div_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\WorkApp\Quartus13.0windows\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\WorkApp\Quartus13.0windows\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/rtl {D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/rtl/clk_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clk_div
+# 
+# Top level modules:
+# 	clk_div
+# 
+# vlog -vlog01compat -work work +incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench {D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench/tb_clk_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_clk_div
+# 
+# Top level modules:
+# 	tb_clk_div
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_clk_div
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_clk_div 
+# Loading work.tb_clk_div
+# Loading work.clk_div
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break in Module tb_clk_div at D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench/tb_clk_div.v line 34
+# Simulation Breakpoint: Break in Module tb_clk_div at D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench/tb_clk_div.v line 34
+# MACRO ./clk_div_run_msim_rtl_verilog.do PAUSED at line 17

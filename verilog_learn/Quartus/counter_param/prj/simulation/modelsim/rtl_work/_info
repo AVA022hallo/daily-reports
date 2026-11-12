@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\WorkProject\Project_TID\daily-reports\verilog_learn\Quartus\counter_param\prj\simulation\modelsim
+vcounter_param
+IDeo4LZQl[;lOb<=nAhW:K0
+V@1aH9hnbW:[5fHAkf=`P=2
+Z1 dD:\WorkProject\Project_TID\daily-reports\verilog_learn\Quartus\counter_param\prj\simulation\modelsim
+w1794460444
+8D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/rtl/counter_param.v
+FD:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/rtl/counter_param.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 5;Bc6?KaOZJgBISS9S9VO0
+!s85 0
+!s108 1794464141.934000
+!s107 D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/rtl/counter_param.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/rtl|D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/rtl/counter_param.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/rtl -O0
+vtb_counter_param
+!i10b 1
+!s100 fN4YJKf?I]khA4<ccW`d`2
+Iih?nKgJBIS54LKz66V3_G3
+VSn@MmPd;gFY4zY1XcQGT01
+R1
+w1794463932
+8D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench/tb_counter_param.v
+FD:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench/tb_counter_param.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1794464141.986000
+!s107 D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench/tb_counter_param.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench|D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench/tb_counter_param.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench -O0

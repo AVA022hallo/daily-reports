@@ -1,0 +1,42 @@
+# Reading D:/WorkApp/Quartus13.0windows/modelsim_ase/tcl/vsim/pref.tcl 
+# do counter_param_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\WorkApp\Quartus13.0windows\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\WorkApp\Quartus13.0windows\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/rtl {D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/rtl/counter_param.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter_param
+# 
+# Top level modules:
+# 	counter_param
+# 
+# vlog -vlog01compat -work work +incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench {D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench/tb_counter_param.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_counter_param
+# 
+# Top level modules:
+# 	tb_counter_param
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_counter_param
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_counter_param 
+# Loading work.tb_counter_param
+# Loading work.counter_param
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# [ERROR] load failed!：q = 0000
+# [ERROR] priority failed!：q = 1111
+# Break in Module tb_counter_param at D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench/tb_counter_param.v line 124
+# Simulation Breakpoint: Break in Module tb_counter_param at D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/counter_param/prj/../testbench/tb_counter_param.v line 124
+# MACRO ./counter_param_run_msim_rtl_verilog.do PAUSED at line 17

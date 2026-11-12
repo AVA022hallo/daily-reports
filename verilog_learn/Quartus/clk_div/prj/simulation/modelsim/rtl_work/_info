@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\WorkProject\Project_TID\daily-reports\verilog_learn\Quartus\clk_div\prj\simulation\modelsim
+vclk_div
+I?[0fW8ihPm[GHU2Xkn;492
+VakJLH8KkW3Om5nVBNdDI=1
+Z1 dD:\WorkProject\Project_TID\daily-reports\verilog_learn\Quartus\clk_div\prj\simulation\modelsim
+w1794471138
+8D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/rtl/clk_div.v
+FD:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/rtl/clk_div.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 D7Q=l:gF<k_<bgVJi9f4C0
+!s85 0
+!s108 1794471161.259000
+!s107 D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/rtl/clk_div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/rtl|D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/rtl/clk_div.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/rtl -O0
+vtb_clk_div
+!i10b 1
+!s100 Ei`DG@mBQ=fLHDd9j:R;21
+I[maXkiUOU^U54BOVzdV]P0
+V_5XM2lL^;JAIRz>cZZQhj3
+R1
+w1794470602
+8D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench/tb_clk_div.v
+FD:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench/tb_clk_div.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1794471161.291000
+!s107 D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench/tb_clk_div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench|D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench/tb_clk_div.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/WorkProject/Project_TID/daily-reports/verilog_learn/Quartus/clk_div/prj/../testbench -O0
